@@ -34,17 +34,20 @@ class PackageManager(object):
         """
         raise NotImplementedError("list_packages must be overriden")
 
-    def install(self, name, force=False):
+    def install(self, names, force=False):
         """
-        Installs a package.
+        Installs a package or packages.
         """
         raise NotImplementedError("install must be overriden")
 
-    def remove(self, name, force=False):
+    def remove(self, names, force=False):
         """
-        Removes a package.
+        Removes a package or packages.
         """
         raise NotImplementedError("remove must be overriden")
 
-    def update(self, name, force=False):
+    def update(self, names, force=False):
+        """
+        Upgrades a package or packages.
+        """
         raise NotImplementedError("update must be overriden")
